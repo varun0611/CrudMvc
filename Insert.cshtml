@@ -1,0 +1,25 @@
+﻿@model MVCCRUD.Models.Customer
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Insert</h2>
+
+<form method="post">
+
+    <div class="form-group">
+        <label>Enter custname :</label> @Html.TextBoxFor(c => c.Custname)
+    @Html.ValidationMessageFor(c => c.Custname)</div>
+    <div class="form-group">
+        <label>age :</label> @Html.TextBoxFor(c => c.Custage)
+        @Html.ValidationMessageFor(c => c.Custage)
+    </div>
+    <div class="form-group">
+        <label>caddress :</label> @Html.TextBoxFor(c => c.Custaddress)</div>
+    <div class="form-group">   
+        <label>phone :</label> @Html.TextBoxFor(c => c.Custaddress)
+        @Html.ValidationMessageFor(c => c.CustPhone)</div>
+        <input type="submit" />
+
+</form>
+@ViewBag.a

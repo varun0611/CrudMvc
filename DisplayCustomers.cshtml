@@ -1,0 +1,30 @@
+﻿@model List<MVCCRUD.Models.Customer>
+@{
+    ViewBag.Title = "DisplayCustomers";
+}
+
+<h2>Customers Details..</h2>
+
+<table class="table table-hover">
+    <tr>
+        <th>Custid</th>
+        <th>custname</th>
+        <th>custage</th>
+        <th>custaddress</th>
+        <th>custphone</th>
+    </tr>
+
+
+    @foreach (var item in Model)
+    {
+    <tr>
+    <td>@item.Custid</td>
+    <td>@item.Custname</td>
+    <td>@item.Custage</td>
+    <td>@item.Custaddress</td>
+    <td>@item.CustPhone</td>
+    </tr>
+    }
+    </table>
+
+
