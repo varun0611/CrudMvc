@@ -1,0 +1,50 @@
+﻿@model IEnumerable<MVCCRUD.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Custname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Custage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Custaddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustPhone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Custname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Custage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Custaddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustPhone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Update", new { id=item.Custid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Custid })
+        </td>
+    </tr>
+}
+
+</table>
